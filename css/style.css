@@ -1,0 +1,88 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{   
+    background-color: rgba(221, 220, 220, 0.782);
+    padding: 20px;
+}
+
+header{
+    width: 100%;
+    border-bottom: 2px solid green !important;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header h1 {
+    color:green;
+}
+
+.imagem-cabecalho{
+    width: 100%; 
+    height: 110px;
+    box-shadow: 0px 3px 10px grey;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 3px;
+
+}
+
+.close{
+    padding: 10px !important;
+}
+
+
+
+.card{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 10px;
+    background-color: white !important;
+    padding: 10px;
+}
+
+.form-label{
+    font-weight: bold !important;
+}
+
+.pegar-assinatura{
+    display: flex !important;
+    flex-direction: column;
+    gap: 5px !important;
+}
+
+#assinatura{
+    height: 50px !important;
+}
+
+.botoes{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-success{
+    width: 50% !important;
+}
+
+
+.erro{
+    border-color: red !important;
+}
+
+.correto{
+    border-color: green !important;
+}

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casinhas</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"
+        defer></script>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <script src="js/script.js" defer></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/signature_pad@2.3.2/dist/signature_pad.min.js" defer></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="imagem-cabecalho">
+            <img
+                src="https://i0.wp.com/emassis.com.br/wp-content/uploads/2016/09/fileg_332642.jpg?fit=800%2C448&ssl=1&w=640" />
+        </div>
+        <h1>RESIDENCIAL APRUMAR</h1>
+        <p>RECADASTRAMENTO CASAS APRUMAR</p>
+    </header>
+
+    <main>
+        <form method="POST" action="https://sheetdb.io/api/v1/vocznt4w52mgt" name="formulario-casinhas "
+            id="formulario-casinhas">
+
+
+
+            <div class="card">
+                <strong>SORTEADO OU SUPLENTE ?</strong>
+                <div class="form-check">
+                    <input class="form-check-input" value="Sorteado" type="radio" name="data[SITUACAO]" id="sorteado" />
+                    <label class="form-check-label" for="sorteado"> SORTEADO </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" value="Suplente" type="radio" name="data[SITUACAO]" id="suplente" />
+                    <label class="form-check-label" for="suplente">
+                        SUPLENTE
+                    </label>
+                </div>
+            </div>
+
+
+
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Nome Completo</label>
+                    <input type="text" class="form-control" name="data[NOME]" id="nome" placeholder="Sua Resposta" />
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Contato com DDD</label>
+                    <input type="text" class="form-control" name="data[CONTATO]" id="contato" maxlength="14"
+                        placeholder="Sua Resposta" />
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">Endereço Completo</label>
+                    <input type="text" class="form-control" name="data[ENDERECO]" id="endereco"
+                        placeholder="Sua Resposta" />
+                </div>
+
+            </div>
+            <div class="card">
+                <div class="mb-3">
+                    <label for="" class="form-label">CPF</label>
+                    <input type="text" class="form-control" name="data[CPF]" id="cpf" placeholder="Sua Resposta"
+                        maxlength="14" />
+                </div>
+
+            </div>
+
+
+
+
+
+            <div class="card">
+                <div class="pegar-assinatura">
+                    <label class="form-label">ASSINATURA</label>
+                    <img id="assinatura-thumbnail" src="" alt="Miniatura da Assinatura"
+                        style="display: none; border: 1px solid #000; width: 350px; height: 100px;" />
+                    <input type="hidden" name="data[ASSINATURA]" id="assinatura" />
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal"
+                        data-bs-target="#assinaturaModal">
+                        Fazer minha Assinatura
+                    </button>
+
+                </div>
+
+            </div>
+
+            <div class="modal fade" id="assinaturaModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Assinar</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-danger" id="limpar-assinatura">Limpar</button>
+                            <button type="button" class="btn btn-primary" id="salvar-assinatura">Salvar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <section class="botoes">
+                <button type="submit" class="btn btn-success" value="Enviar" id="enviar">Enviar</button>
+                <button type="button" class="btn btn-outline-primary" id="limpar-formulario">Limpar Formulário</button>
+
+
+            </section>
+
+        </form>
+
+
+
+
+
+    </main>
+
+</body>
+
+</html>
