@@ -142,6 +142,7 @@ form.addEventListener('submit', function(e){
         form.reset();
         assinaturaThumbnail.style.display = 'none';
         signaturePad.clear();
+        assinaturaRealizada = false;
     })
     .catch(err => {
         console.error('Erro no envio dos dados!!',err);
