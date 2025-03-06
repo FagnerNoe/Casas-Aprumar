@@ -45,9 +45,11 @@ document.getElementById("cpf").addEventListener("input", function(e) {
    
    
     if (value.length === 14) {
+        document.getElementById("aviso").classList.add("mensagem-aviso");
         this.classList.remove("erro");
         this.classList.add("correto");
     } else {
+        document.getElementById("aviso").classList.remove("mensagem-aviso");
         this.classList.remove("correto");
         this.classList.add("erro");
     }

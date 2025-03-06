@@ -47,7 +47,14 @@ img{
     padding: 10px !important;
 }
 
+#aviso{
+    color: red;
+}
 
+.mensagem-aviso{
+    display: none !important;
+          
+}
 
 .card{
     margin-top: 10px;
