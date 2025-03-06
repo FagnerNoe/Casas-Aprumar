@@ -115,19 +115,22 @@ form.addEventListener('submit', function(e){
       return;
     }    
      if (nome === '' || endedereco === '' || telefone === '' || cpf === '' || cpf.length < 14) {
-      console.log(cpf.length);
-      alert('Por favor, preencha todos os campos antes de enviar o formulário.');
-      return;
+      if(cpf.length < 14) {
+        alert('Por favor, preencha o campo CPF corretamente.');
+      }else{      
+      alert('Por favor, preencha todos os campos antes de enviar o formulário.');      
     }
+    return false; // Evita o envio do formulário
+    
+    }
+
+   
  
 
     if (!assinaturaRealizada) {
       alert('Por favor, salve sua assinatura antes de enviar o formulário.');
       return;
-    }
-
-
-    
+    }    
     
    
   
