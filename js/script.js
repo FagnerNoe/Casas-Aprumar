@@ -114,7 +114,7 @@ form.addEventListener('submit', function(e){
       alert('Por favor, selecione uma opção antes de enviar o formulário.');
       return;
     }    
-     if (nome === '' || endedereco === '' || telefone === '' || cpf === '' || cpf.length < '14') {
+     if (nome === '' || endedereco === '' || telefone === '' || cpf === '' || cpf.length < 14) {
       console.log(cpf.length);
       alert('Por favor, preencha todos os campos antes de enviar o formulário.');
       return;
