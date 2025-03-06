@@ -114,7 +114,8 @@ form.addEventListener('submit', function(e){
       alert('Por favor, selecione uma opção antes de enviar o formulário.');
       return;
     }    
-     if (nome === '' || endedereco === '' || telefone === '' || cpf === '') {
+     if (nome === '' || endedereco === '' || telefone === '' || cpf === '' || cpf.length < '14') {
+      console.log(cpf.length);
       alert('Por favor, preencha todos os campos antes de enviar o formulário.');
       return;
     }
@@ -145,6 +146,7 @@ form.addEventListener('submit', function(e){
         assinaturaThumbnail.style.display = 'none';
         signaturePad.clear();
         assinaturaRealizada = false;
+        
     })
     .catch(err => {
         console.error('Erro no envio dos dados!!',err);
